@@ -1,51 +1,127 @@
 ///
-/// Editorial by HTML5 UP
+/// Multiverse by HTML5 UP
 /// html5up.net | @ajlkn
 /// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 ///
 
 /* Header */
 
+	body {
+		padding: 0 0 _size(header) 0;
+	}
+
 	#header {
-		@include vendor('display', 'flex');
-		border-bottom: solid 5px _palette(accent);
-		padding: 6em 0 1em 0;
-		position: relative;
+		@include vendor('transform', 'translateY(0)');
+		@include vendor('transition', 'transform #{_duration(header)} ease');
+		-moz-user-select: none;
+		-ms-user-select: none;
+		-webkit-user-select: none;
+		background: _palette(bg-alt);
+		bottom: -1em;
+		height: _size(header) + 1em;
+		left: 0;
+		line-height: _size(header);
+		padding: 0 1.5em;
+		position: fixed;
+		user-select: none;
+		width: 100%;
+		z-index: _misc(z-index-base) + 2;
 
-		> * {
-			@include vendor('flex', '1');
-			margin-bottom: 0;
+		body.is-preload & {
+			@include vendor('transform', 'translateY(#{_size(header)})');
 		}
 
-		.logo {
-			border-bottom: 0;
-			color: inherit;
-			font-family: _font(family-heading);
-			font-size: 1.125em;
+		h1 {
+			color: _palette(fg);
+			display: inline-block;
+			font-size: 1em;
+			line-height: 1;
+			margin: 0;
+			vertical-align: middle;
+
+			a {
+				border: 0;
+				color: inherit;
+
+				&:hover {
+					color: inherit !important;
+				}
+			}
 		}
 
-		.icons {
-			text-align: right;
-		}
+		nav {
+			position: absolute;
+			right: 0;
+			top: 0;
 
-		@include breakpoint('<=xlarge') {
-			padding-top: 5em;
-		}
-
-		@include breakpoint('<=small') {
-			padding-top: 6.5em;
-
-			.logo {
-				font-size: 1.25em;
+			> ul {
+				list-style: none;
 				margin: 0;
+				padding: 0;
+
+				> li {
+					display: inline-block;
+					padding: 0;
+
+					a {
+						@include vendor('transition', 'background-color #{_duration(panel)} ease');
+						border: 0;
+						color: _palette(fg-bold);
+						display: inline-block;
+						letter-spacing: _font(kerning-alt);
+						padding: 0 1.65em;
+						text-transform: uppercase;
+
+						&.icon {
+							&:before {
+								color: _palette(fg-light);
+								float: right;
+								margin-left: 0.75em;
+							}
+						}
+
+						&:hover {
+							color: _palette(fg-bold) !important;
+						}
+
+						&.active {
+							background-color: _palette(bg);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@include breakpoint('<=small') {
+		body {
+			padding: _size(header) 0 0 0;
+		}
+
+		#header {
+			@include vendor('transform', 'translateY(0)');
+			bottom: auto;
+			height: _size(header);
+			padding: 0 1em;
+			top: 0;
+
+			body.is-preload & {
+				@include vendor('transform', 'translateY(#{_size(header) * -0.85})');
 			}
 
-			.icons {
-				height: (6.25em / 1.25);
-				line-height: (6.25em / 1.25);
-				position: absolute;
-				right: (-0.625em / 1.25);
-				top: 0;
+			h1 {
+				font-size: 0.9em;
+			}
+
+			nav {
+				> ul {
+					> li {
+						a {
+							font-size: 0.9em;
+							padding: 0 1.15em;
+						}
+					}
+				}
 			}
 		}
 	}
