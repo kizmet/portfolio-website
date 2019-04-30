@@ -1567,10 +1567,10 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		-moz-transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, -moz-filter 0.5s ease;
+		/* -moz-transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, -moz-filter 0.5s ease;
 		-webkit-transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, -webkit-filter 0.5s ease;
 		-ms-transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, -ms-filter 0.5s ease;
-		transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, filter 0.5s ease;
+		transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, filter 0.5s ease; */
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -1592,6 +1592,7 @@ input, select, textarea {
 			opacity: 1;
 			overflow: hidden;
 			position: relative;
+			background-size: cover;
 		}
 
 			#main .thumb:after {
@@ -1608,13 +1609,15 @@ input, select, textarea {
 				position: absolute;
 				top: 0;
 				width: 100%;
+				background-repeat: no-repeat;
 			}
+
 
 			#main .thumb > .image {
 				-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 				background-position: center;
 				background-repeat: no-repeat;
-				background-size: cover;
+				background-size: contain;
 				border: 0;
 				height: 100%;
 				left: 0;
@@ -1623,6 +1626,7 @@ input, select, textarea {
 				width: 100%;
 			}
 
+			
 			#main .thumb > h2 {
 				pointer-events: none;
 				bottom: 1.875em;
