@@ -53,6 +53,8 @@
 				width: 100%;
 			}
 
+			
+
 			> h2 {
 				@include vendor('pointer-events', 'none');
 				bottom: (1.5em / 0.8);

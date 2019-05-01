@@ -163,7 +163,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #242629;
+		background: #525353;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -254,7 +254,7 @@ input, select, textarea {
 	}
 
 	h2 {
-		font-size: 1.25em;
+		font-size: 1.8em;
 	}
 
 	h3 {
@@ -1567,10 +1567,10 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		-moz-transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, -moz-filter 0.5s ease;
+		/* -moz-transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, -moz-filter 0.5s ease;
 		-webkit-transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, -webkit-filter 0.5s ease;
 		-ms-transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, -ms-filter 0.5s ease;
-		transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, filter 0.5s ease;
+		transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, filter 0.5s ease; */
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -1592,13 +1592,15 @@ input, select, textarea {
 			opacity: 1;
 			overflow: hidden;
 			position: relative;
+			background-size: cover;
 		}
 
 			#main .thumb:after {
-				background-image: -moz-linear-gradient(to top, rgba(10,17,25,0.35) 5%, rgba(10,17,25,0) 35%);
+				/* background-image: -moz-linear-gradient(to top, rgba(10,17,25,0.35) 5%, rgba(10,17,25,0) 35%);
 				background-image: -webkit-linear-gradient(to top, rgba(10,17,25,0.35) 5%, rgba(10,17,25,0) 35%);
 				background-image: -ms-linear-gradient(to top, rgba(10,17,25,0.35) 5%, rgba(10,17,25,0) 35%);
-				background-image: linear-gradient(to top, rgba(10,17,25,0.35) 5%, rgba(10,17,25,0) 35%);
+				background-image: linear-gradient(to top, rgba(10,17,25,0.35) 5%, rgba(10,17,25,0) 35%); */
+				background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5));
 				pointer-events: none;
 				background-size: cover;
 				content: '';
@@ -1608,13 +1610,16 @@ input, select, textarea {
 				position: absolute;
 				top: 0;
 				width: 100%;
+				background-repeat: no-repeat;
+				filter: blur(9em);
 			}
+
 
 			#main .thumb > .image {
 				-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 				background-position: center;
 				background-repeat: no-repeat;
-				background-size: cover;
+				background-size: contain;
 				border: 0;
 				height: 100%;
 				left: 0;
@@ -1623,19 +1628,24 @@ input, select, textarea {
 				width: 100%;
 			}
 
+			
 			#main .thumb > h2 {
 				pointer-events: none;
 				bottom: 1.875em;
-				font-size: 0.8em;
+				/* font-size: 1em; */
 				left: 2.1875em;
 				margin: 0;
 				position: absolute;
 				z-index: 1;
+				background: rgba(0, 0, 0, 0.35);
+				color: white;
+				padding: 0.2em 0.8em;
 			}
 
 			#main .thumb > p {
 				display: none;
 			}
+\
 
 		#main:after {
 			pointer-events: none;
