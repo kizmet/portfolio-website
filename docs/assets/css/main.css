@@ -254,7 +254,7 @@ input, select, textarea {
 	}
 
 	h2 {
-		font-size: 1.25em;
+		font-size: 1.8em;
 	}
 
 	h3 {
@@ -1596,10 +1596,11 @@ input, select, textarea {
 		}
 
 			#main .thumb:after {
-				background-image: -moz-linear-gradient(to top, rgba(10,17,25,0.35) 5%, rgba(10,17,25,0) 35%);
+				/* background-image: -moz-linear-gradient(to top, rgba(10,17,25,0.35) 5%, rgba(10,17,25,0) 35%);
 				background-image: -webkit-linear-gradient(to top, rgba(10,17,25,0.35) 5%, rgba(10,17,25,0) 35%);
 				background-image: -ms-linear-gradient(to top, rgba(10,17,25,0.35) 5%, rgba(10,17,25,0) 35%);
-				background-image: linear-gradient(to top, rgba(10,17,25,0.35) 5%, rgba(10,17,25,0) 35%);
+				background-image: linear-gradient(to top, rgba(10,17,25,0.35) 5%, rgba(10,17,25,0) 35%); */
+				background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5));
 				pointer-events: none;
 				background-size: cover;
 				content: '';
@@ -1610,6 +1611,7 @@ input, select, textarea {
 				top: 0;
 				width: 100%;
 				background-repeat: no-repeat;
+				filter: blur(9em);
 			}
 
 
@@ -1630,12 +1632,12 @@ input, select, textarea {
 			#main .thumb > h2 {
 				pointer-events: none;
 				bottom: 1.875em;
-				font-size: 0.8em;
+				/* font-size: 1em; */
 				left: 2.1875em;
 				margin: 0;
 				position: absolute;
 				z-index: 1;
-				background: rgba(0, 0, 0, 0.75);
+				background: rgba(0, 0, 0, 0.35);
 				color: white;
 				padding: 0.2em 0.8em;
 			}
@@ -1643,10 +1645,7 @@ input, select, textarea {
 			#main .thumb > p {
 				display: none;
 			}
-			svg {
-				width: 360px;
-				height: 274px;
-			  }	
+\
 
 		#main:after {
 			pointer-events: none;
