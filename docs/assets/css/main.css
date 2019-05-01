@@ -1635,11 +1635,18 @@ input, select, textarea {
 				margin: 0;
 				position: absolute;
 				z-index: 1;
+				background: rgba(0, 0, 0, 0.75);
+				color: white;
+				padding: 0.2em 0.8em;
 			}
 
 			#main .thumb > p {
 				display: none;
 			}
+			svg {
+				width: 360px;
+				height: 274px;
+			  }	
 
 		#main:after {
 			pointer-events: none;

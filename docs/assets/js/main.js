@@ -250,7 +250,7 @@
 					return s;
 
 				},
-				fadeSpeed: 100,
+				fadeSpeed: 300,
 				onPopupClose: function() { $body.removeClass('modal-active'); },
 				onPopupOpen: function() { $body.addClass('modal-active'); },
 				overlayOpacity: 0,
